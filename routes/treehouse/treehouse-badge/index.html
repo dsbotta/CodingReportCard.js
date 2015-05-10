@@ -1,0 +1,37 @@
+<div ng-cloak>
+	<div>
+		<a class="bread-crumb" href="#/">Report Card Home</a>
+	</div>
+	<div class="single-badge-image">
+		<div style="height: 100px; margin: 30px 0 20px 0;">
+			<div class="left-arrow">
+				<a href="#/treehouse-badge/{{prevBadge.id}}">
+					<img src="img/arrow-left.png" alt="left arrow"/>
+				</a>
+			</div>
+			<div class="single-badge-title">
+				<h1 class="single-badge-title">{{badge.name}}</h1>
+			</div>
+			<div class="right-arrow">
+				<a href="#/treehouse-badge/{{nextBadge.id}}">
+					<img src="img/arrow-right.png" alt="right arrow"/>
+				</a>
+			</div>
+		</div>
+		<div class="single-image-container">
+		<div class="single-image">
+			<img ng-src="{{badge.icon_url}}" alt="{{badge.name}} badge image"/>
+		</div>
+		<div class="single-badge-info-container">
+			<h2>Completed Courses</h2>
+			<ul class="badge-courses">
+				<li ng-repeat="course in badge.courses">
+					<h3>{{course.title}}</h3>
+					<a ng-href="{{course.url}}">View This Course</a>
+				</li>
+			</ul>
+		</div>
+		<h4>This Badge was earned on {{badge.earned_date | date:'MMM-d-yyyy'}}</h4>
+		</div>
+	</div>
+</div>

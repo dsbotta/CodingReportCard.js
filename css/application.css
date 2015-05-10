@@ -1,0 +1,218 @@
+*{box-sizing: border-box; font-family: Helvetica, Arial, sans-serif;}
+
+.container {
+	display: block;
+	width: 1098px;
+	margin: auto;
+}
+
+/*HEADER*/
+
+.header {
+	background-color: rgb(230,230,230);
+	margin: 0;
+	padding: 5px 0 5px 25px;
+}
+
+
+/*Treehouse Page*/
+
+.profile-image {
+	display: block;
+	margin: 10px auto 0 auto;
+	width: 150px;
+	border-radius: 50%;
+	border: 5px solid rgb(230,230,230);
+}
+
+.reportcard-name {
+	margin: 10px 0 20px;
+	text-align: center;
+	font-size: 30px;
+}
+
+.search {
+	display: block;
+	background-color: rgb(230,230,230);
+	max-width: 550px;
+	padding: 0 10px;
+	border-radius: 3px;
+	box-shadow: 0 0 4px black;
+	margin: 0 auto 30px auto;
+}
+
+.search h4 {
+	display: inline-block;
+}
+
+.search-bar {
+	width: 400px;
+	height: 40px;
+	font-size: 16px;
+	background-color: rgb(245,245,245);
+}
+
+.all-badges-container {
+	background-color: rgb(230,230,230);
+	padding: 28px;
+	border-radius: 15px;
+}
+
+.badge-images {
+	display: inline-block;
+	width: 90px; 
+	margin: 7px;
+	perspective: 500;
+	-webkit-perspective: 500;
+	-moz-perspective: 500
+	-o-perspective: 500
+}
+
+.badge-image {
+	width: 90px;
+	transform: rotateY(0deg);
+	transform-style: preserve-3d;
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	-o-transition: .3s;
+    transition: .3s;
+}
+
+.badge-hover-description {
+	z-index: 0;
+	position: absolute;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 10px;
+	padding: 0px 7px;
+	font-size: 11px;
+	width: 90px;
+	height: 90px;
+	color: white;
+	opacity: 0;
+	transform: rotateY(180deg);
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	-o-transition: .3s;
+    transition: .3s;
+}
+
+.badge-hover-description p {
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	-wekit-transform: translateY(-50%);
+  	-moz-transform: translateY(-50%);
+  	-o-transform: translateY(-50%);
+}
+
+.badge-images:hover .badge-image{
+	filter: contrast(15%);
+	-webkit-filter: contrast(15%);
+	-moz-filter: contrast(15%);
+	-o-filter: contrast(15%);
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+}
+
+.badge-images:hover .badge-hover-description {
+	opacity: 1;
+	z-index: 1;
+	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+}
+
+/*Individual Treehouse Badge*/
+
+.single-badge-title {
+	width: 80%;
+	display: inline-block;
+	text-align: center;
+}
+
+.single-badge-image {
+	display: block;
+	margin: auto;
+}
+
+.single-badge-image img{
+	width: 75%;
+	float: right;
+}
+
+.single-badge-image h1 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.single-badge-image h4 {
+	text-align: center;
+	font-weight: none;
+}
+
+.single-image-container {
+	width: 100%;
+	padding: 20px 5px;
+	background-color: rgb(230,230,230);
+	border: 2px solid rgb(220,220,220);
+}
+
+.single-image {
+	display: inline-block;
+	width: 50%; 
+}
+
+.single-badge-info-container {
+	width: 50%;
+	padding: 90px 0 0 20px;
+	float: right;
+}
+
+/*Navigation*/
+
+.bread-crumb {
+	padding: 10px 0;
+}
+
+.left-arrow {
+	float: left; 
+	width: 10%; 
+}
+
+.left-arrow img {
+	float: left;
+	height: 100px;
+	transition: .2s; 
+}
+
+.right-arrow {
+	float: right; 
+	width: 10%;
+}
+
+.right-arrow img {
+	height: 100px;
+	transition: .2s;  
+}
+
+.left-arrow img:hover, 
+.right-arrow img:hover {
+	opacity: .5;
+}
+
+/*Navigation*/
+
+
+
+
+
+
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
+    display: none !important;
+}

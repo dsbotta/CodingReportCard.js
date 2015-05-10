@@ -1,0 +1,15 @@
+@media screen and (max-width: 1098px) {
+
+	.container {
+		width: 968px;
+	}
+
+	.all-badges-container {
+		padding: 24px;
+	}
+
+	.badge-images {
+		margin: 6px;
+	}
+
+}
