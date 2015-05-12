@@ -1,18 +1,17 @@
 <div ng-cloak>
 	<div>
-		<img class="profile-image" ng-src="{{profile.gravatar_url}}" alt="{{profile.name}}"/>
-		<!-- <h3 style="text-align: center;">
-			<a ng-href="{{profile.profile_url}}">{{profile.profile_name}}</a>
-		</h3> -->
-		<h1 class="reportcard-name">{{profile.name}}'s Treehouse Report Card</h1>
+		<img class="profile-image" ng-src="{{profileT.gravatar_url}}" alt="{{profileT.name}}"/>
+		<h1 class="reportcard-name">{{profileT.name}}'s Treehouse Report Card</h1>
+		<h2 class="reportcard-name">{{profileT.points.total}} total points earned!</h2>
 	</div>
+		
 	<div class="search">
 		<h4>Search Badges: </h4>
 		<input class="search-bar" type="text" placeholder="Search Keyword..." ng-model="filterBadges"/></input>
 	</div>
 	<div class="all-badges-container">	
-		<div ng-repeat="badge in profile.badges | filter:filterBadges:myInfo.badges.name"  class="badge-images">
-			<a href="#/treehouse-badge/{{badge.id}}">
+		<div ng-repeat="badge in profileT.badges | filter:filterBadges:myInfo.badges.name"  class="badge-images">
+			<a ng-href="#/treehouse-badge/{{badge.id}}">
 				<div style="position: relative;">
 					<span class="badge-hover-description">
 						<p style="margin: 0;">{{badge.name}}</p>
