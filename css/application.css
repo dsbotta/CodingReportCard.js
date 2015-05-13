@@ -1,6 +1,14 @@
 *{box-sizing: border-box; font-family: Helvetica, Arial, sans-serif;}
 
+body {
+	color: rgb(80,80,80);
+}
+
 a{text-decoration: none; color: rgb(100,100,100); font-style: oblique;}
+
+a:hover {
+	opacity: 0.7;
+}
 
 .container {
 	display: block;
@@ -12,38 +20,85 @@ a{text-decoration: none; color: rgb(100,100,100); font-style: oblique;}
 
 .header {
 	background-color: rgb(230,230,230);
+	padding: 3px;
 	margin: 0;
-	padding: 5px 0 5px 25px;
 }
 
-.header img {
-	width: 500px;
+.header-title {
+	width: 300px;
+	text-align: center;
+	font-size: 11px;
+	font-style: italic;
+	margin: 0 auto;
+}
+
+.nav-container {
+	margin: auto;
+}
+
+.nav {
+	width: 50%;
+	text-align: center;
+	display: inline-block;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.nav-button {
+	padding: 10px;
+	border-radius: 10px;
+	border: none;
+	color: white;
+	outline: none;
+	transition: .2s;
+	-webkit-transition: .2s;
+	-moz-transition: .2s;
+	-o-transition: .2s;
 }
 
 
 /*Treehouse Page*/
+/**/
+.profile-info-left {
+	display: inline-block;
+	padding: 5px 0;
+	width: 50%;
+}
+
+.profile-info-right {
+	display: inline-block;
+	width: 49%;
+	float: right;
+}
 
 .profile-image {
-	display: block;
-	margin: 10px auto 0 auto;
 	width: 100px;
 	border-radius: 50%;
 	border: 5px solid rgb(230,230,230);
+	float: left;
+	box-shadow: 0 0 4px black;
 }
 
 .reportcard-name {
-	margin: 10px 0 20px;
-	text-align: center;
+	display: inline-block;
+	text-align: left;
+	margin-left: 10px;
+}
+
+.reportcard-name h2 {
+	margin: 10px 0 0;
+}
+.reportcard-name h3 {
+	margin: 5px 0 0;
 }
 
 .search {
-	display: block;
 	background-color: rgb(230,230,230);
-	max-width: 550px;
-	padding: 0 10px;
-	border-radius: 3px;
+	width: 100%;
+	padding: 10px 0;
+	border-radius: 8px;
 	box-shadow: 0 0 4px black;
-	margin: 0 auto 30px auto;
+	margin-top: 35px;
 }
 
 .search h4 {
@@ -51,8 +106,10 @@ a{text-decoration: none; color: rgb(100,100,100); font-style: oblique;}
 }
 
 .search-bar {
-	width: 400px;
+	display: block;
+	width: 95%;
 	height: 40px;
+	margin: auto;
 	font-size: 16px;
 	background-color: rgb(245,245,245);
 }
@@ -61,6 +118,8 @@ a{text-decoration: none; color: rgb(100,100,100); font-style: oblique;}
 	background-color: rgb(230,230,230);
 	padding: 28px;
 	border-radius: 15px;
+	margin-top: 10px;
+	box-shadow: 0 0 4px black;
 }
 
 .badge-images {
@@ -74,7 +133,7 @@ a{text-decoration: none; color: rgb(100,100,100); font-style: oblique;}
 }
 
 .badge-image {
-	width: 90px;
+	width: 100%;
 	transform: rotateY(0deg);
 	transform-style: preserve-3d;
 	-webkit-transition: .3s;
@@ -91,8 +150,8 @@ a{text-decoration: none; color: rgb(100,100,100); font-style: oblique;}
 	border-radius: 10px;
 	padding: 0px 7px;
 	font-size: 11px;
-	width: 90px;
-	height: 90px;
+	width: 100%;
+	height: 100%;
 	color: white;
 	opacity: 0;
 	transform: rotateY(180deg);
@@ -173,6 +232,7 @@ a{text-decoration: none; color: rgb(100,100,100); font-style: oblique;}
 }
 
 .single-badge-info-container {
+	display: inline-block;
 	width: 50%;
 	padding: 90px 0 0 20px;
 	float: right;
@@ -192,7 +252,11 @@ a{text-decoration: none; color: rgb(100,100,100); font-style: oblique;}
 .left-arrow img {
 	float: left;
 	height: 100px;
-	transition: .2s; 
+	transition: .2s;
+	-webkit-transition: .2s;
+	-mox-transition: .2s;
+	-o-transition: .2s;  
+ 
 }
 
 .right-arrow {
@@ -202,12 +266,15 @@ a{text-decoration: none; color: rgb(100,100,100); font-style: oblique;}
 
 .right-arrow img {
 	height: 100px;
-	transition: .2s;  
+	transition: .2s;
+	-webkit-transition: .2s;
+	-mox-transition: .2s;
+	-o-transition: .2s;  
 }
 
 .left-arrow img:hover, 
 .right-arrow img:hover {
-	opacity: .5;
+	opacity: .8;
 }
 
 /*Navigation*/

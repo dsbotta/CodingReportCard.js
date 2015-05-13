@@ -1,4 +1,4 @@
-@media screen and (max-width: 1098px) {
+@media screen and (max-width: 1224px) {
 
 	.container {
 		width: 968px;
@@ -12,4 +12,108 @@
 		margin: 6px;
 	}
 
+	.single-badge-info-container {
+		padding-top: 80px;
+		font-size: 90%;
+	}
+
 }
+
+@media screen and (max-width: 978px) {
+	.container {
+		width: 95%;
+	}
+
+	.all-badges-container {
+		padding: 1%;
+	}
+
+	.badge-images {
+		width: 13.2%;
+		margin: .5%;
+	}
+
+	.profile-info-left {
+		display: block;
+		padding: 5px 0;
+		width: 100%;
+	}
+
+	.profile-info-right {
+		width: 100%;
+		float: none;
+	}
+
+	.search {
+		margin: 10px 0;
+	}
+
+	.single-badge-info-container {
+		padding-top: 65px;
+		font-size: 80%;
+	}
+
+	.single-badge-title {
+		font-size: 25px;
+		margin-top: 15px;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+
+	.container {
+		width: 95%;
+	}
+
+	.all-badges-container {
+		padding: 0;
+	}
+
+	.badge-images {
+		width: 23%;
+		margin: 1%;
+	}
+
+	.badge-hover-description {
+		font-size: 15px;
+	}
+
+	.single-image {
+		width: 60%;
+		display: block;
+		margin: auto;
+	}
+
+	.single-badge-image img{
+		width: 100%;
+		float: none;
+	}
+
+	.single-badge-info-container {
+		width: 100%;
+		margin: auto;
+		float: none;
+		padding-top: 10px;
+		text-align: center;
+	}
+
+	.single-badge-info-container ul {
+		list-style: none;
+		padding: 0;
+		text-align: center;
+	}
+
+	.single-badge-title {
+		font-size: 22px;
+	}	
+
+@media screen and (max-width: 600px) {
+	
+	.badge-hover-description {
+		font-size: 11px;
+	}
+}
+
+
+
