@@ -66,6 +66,10 @@
 		width: 95%;
 	}
 
+	.reportcard-name {
+		font-size: 85%;
+	}
+
 	.all-badges-container {
 		padding: 0;
 	}
