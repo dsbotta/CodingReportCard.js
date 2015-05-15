@@ -1,6 +1,8 @@
 
 .animate.ng-enter, .animate.ng-leave {
   	-webkit-transition: all .3s;
+  	-moz-transition: all .3s;
+  	-o-transition: all .3s;
   	transition: all .3s;
   	perspective: 500;
 	-webkit-perspective: 500;
@@ -11,24 +13,37 @@
 .animate.ng-enter {
 	opacity: 1;
 	transform: rotatex(180deg);
+	-wekit-tranform: rotatex(180deg);
+	-moz-tranform: rotatex(180deg);
+	-o-tranform: rotatex(180deg);
+	transform-style: preserve-3d;
   	right:10px;
   	bottom:10px;
 }
 
 .animate.ng-enter.ng-enter-active {
 	transform: rotatex(0deg);
+	-wekit-tranform: rotatex(0deg);
+	-moz-tranform: rotatex(0deg);
+	-o-tranform: rotatex(0deg);
 	transform-style: preserve-3d;
 	opacity: 1;
 }
 
 .animate.ng-leave {
 	transform: rotatex(0deg);
+	-wekit-tranform: rotatex(0deg);
+	-moz-tranform: rotatex(0deg);
+	-o-tranform: rotatex(0deg);
 	transform-style: preserve-3d;
 	opacity: 1;
 }
 
 .animate.ng-leave.ng-leave-active {
 	transform: rotatex(180deg);
+	-wekit-tranform: rotatex(180deg);
+	-moz-tranform: rotatex(180deg);
+	-o-tranform: rotatex(180deg);
 	transform-style: preserve-3d;
 	opacity: 1;
 }
