@@ -12,8 +12,10 @@
 			$http.jsonp('https://www.codeschool.com/users/dsbotta.json?callback=JSON_CALLBACK', {cache: true})
 				.success(function(data) {
 					$scope.profileC = data;
-				})	
-
+					setTimeout(function() {
+						$('.loader').fadeOut();
+					}, 1000);
+				})		
 		}]);
 
 	angular.module('CodingReportCard')

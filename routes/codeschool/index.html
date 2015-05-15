@@ -2,13 +2,11 @@
 	<div class="container">
 		<div class="nav">
 			<a style="float: right;" href="#/">
-				<button class="nav-button">Treehouse</button>
-				<!-- <h3 style="text-align: right;">Treehouse</h3> -->
+				<img class="nav-button" src="img/treehouse.png" alt="treehouse logo">
 			</a>
 		</div><div class="nav">	
 			<a style="float: left;" href="#/codeschool">
-				<!-- <h3 style="text-align: left;">CodeSchool</h3> -->
-				<button class="nav-button">Code School</button>
+				<img class="nav-button" src="img/codeschool.png" alt="code school logo">
 			</a>
 		</div>	
 	</div>
@@ -17,7 +15,7 @@
 			<div class="profile-info-left-container">
 				<img class="profile-image" ng-src="{{profileC.user.avatar}}" alt="{{profileC.user.username}} profile image"/>
 				<div class="reportcard-name">
-					<h2 class="reportcard-name">{{profileC.user.username}}'s<br/>CodeSchool Report Card</h2>
+					<h2>{{profileC.user.username}}'s<br/>CodeSchool Report Card</h2>
 					<h3>{{profileC.user.total_score}} total points earned!</h3>
 				</div>
 			</div>
@@ -31,7 +29,7 @@
 	</div>
 	<h3>Completed</h3>
 	<div class="all-badges-container">	
-		<div ng-repeat="badge in profileC.badges | filter:filterBadges:profileC.badges.name"  class="badge-images">
+		<div class="badge-images animate" ng-repeat="badge in profileC.badges | filter:filterBadges:profileC.badges.name">
 			<a ng-href="{{badge.course_url}}">
 				<div style="position: relative;">
 					<span class="badge-hover-description">
@@ -42,17 +40,19 @@
 			</a>
 		</div>
 	</div>
-	<h3>In Progress</h3>
-	<div class="all-badges-container">
-		<div ng-repeat="badge in profileC.courses.in_progress" class="badge-images">
-			<a ng-href="{{badge.url}}">
-				<div style="position: relative;">
-					<span class="badge-hover-description">
-						<p style="margin: 0;">{{badge.title}}</p>
-					</span>
-					<img class="badge-image" ng-src="{{badge.badge}}" alt="{{badge.title}} badge image"/>
-				</div>
-			</a>	
-		</div>	
+	<div ng-if="profileC.courses.in_progress">
+		<h3>In Progress</h3>
+		<div class="all-badges-container">
+			<div class="badge-images" ng-repeat="badge in profileC.courses.in_progress">
+				<a ng-href="{{badge.url}}">
+					<div style="position: relative;">
+						<span class="badge-hover-description">
+							<p style="margin: 0;">{{badge.title}}</p>
+						</span>
+						<img class="badge-image" ng-src="{{badge.badge}}" alt="{{badge.title}} badge image"/>
+					</div>
+				</a>	
+			</div>	
+		</div>
 	</div>	
 </div>

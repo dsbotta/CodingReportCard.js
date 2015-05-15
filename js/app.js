@@ -1,6 +1,5 @@
 (function() {
 
-	angular.module('CodingReportCard', ['ngRoute']);
+	angular.module('CodingReportCard', ['ngRoute', 'ngAnimate']);
 
 })();
-
