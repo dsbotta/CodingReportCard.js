@@ -11,7 +11,7 @@
 }
 
 .animate.ng-enter {
-	opacity: 1;
+	opacity: 0;
 	transform: rotatex(180deg);
 	-wekit-tranform: rotatex(180deg);
 	-moz-tranform: rotatex(180deg);
@@ -45,6 +45,6 @@
 	-moz-tranform: rotatex(180deg);
 	-o-tranform: rotatex(180deg);
 	transform-style: preserve-3d;
-	opacity: 1;
+	opacity: 0;
 }
 
