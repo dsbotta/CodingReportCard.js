@@ -119,6 +119,7 @@ a:hover {
 
 .profile-image {
 	width: 100px;
+	min-height: 100px;
 	border-radius: 50%;
 	border: 5px solid rgb(230,230,230);
 	float: left;
@@ -236,6 +237,10 @@ a:hover {
 	-webkit-transform: rotateY(0deg);
 	-moz-transform: rotateY(0deg);
 	-o-transform: rotateY(0deg);
+}
+
+.error {
+	text-align: center;
 }
 
 /*Individual Treehouse Badge Page*/

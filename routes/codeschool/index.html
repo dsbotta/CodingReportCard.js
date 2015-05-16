@@ -10,8 +10,12 @@
 			</a>
 		</div>	
 	</div>
+	<div class="error" ng-if="statusC">
+		<h3>{{statusC}} Error</h3>
+		<p>{{messageC}}</p>
+	</div>
 	<div>
-		<div class="profile-info-left">
+		<div class="profile-info-left" ng-if="profileC">
 			<div class="profile-info-left-container">
 				<img class="profile-image" ng-src="{{profileC.user.avatar}}" alt="{{profileC.user.username}} profile image"/>
 				<div class="reportcard-name">
@@ -22,13 +26,12 @@
 		</div>
 		<div class="profile-info-right">	
 			<div class="search">
-				<!-- <h4>Search Badges: </h4> -->
 				<input class="search-bar" type="text" placeholder="Search Completed Badges..." ng-model="filterBadges"/></input>
 			</div>
 		</div>
 	</div>
-	<h3>Completed</h3>
-	<div class="all-badges-container">	
+	<h3 ng-if="profileC">Completed</h3>
+	<div class="all-badges-container" ng-if="profileC">	
 		<div class="badge-images animate" ng-repeat="badge in profileC.badges | filter:filterBadges:profileC.badges.name">
 			<a ng-href="{{badge.course_url}}">
 				<div style="position: relative;">

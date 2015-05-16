@@ -62,12 +62,20 @@
 
 @media screen and (max-width: 768px) {
 
+	.author {
+		margin-bottom: 10px;
+	}
+
+	.nav-button {
+		width: 150px;
+	}
+
 	.container {
 		width: 95%;
 	}
 
 	.reportcard-name {
-		font-size: 85%;
+		font-size: 80%;
 	}
 
 	.all-badges-container {

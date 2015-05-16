@@ -9,9 +9,22 @@
 					$scope.profileT = data;
 				})
 
+				.error(function(data, status) {
+					$scope.messageT = "Failed to get profile information.";
+					$scope.statusT = status;
+				})
+
 			$http.jsonp('https://www.codeschool.com/users/dsbotta.json?callback=JSON_CALLBACK', {cache: true})
 				.success(function(data) {
 					$scope.profileC = data;
+					setTimeout(function() {
+						$('.loader').fadeOut();
+					}, 1000);
+				})
+
+				.error(function(data, status) {
+					$scope.messageC = "Failed to get profile information.";
+					$scope.statusC = status;
 					setTimeout(function() {
 						$('.loader').fadeOut();
 					}, 1000);
@@ -54,8 +67,6 @@
 					treehouse.profile = data;
 					init();
 			})
-
-
 
 		}]);
 
