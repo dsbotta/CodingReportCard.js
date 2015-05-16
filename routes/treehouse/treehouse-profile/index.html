@@ -1,15 +1,7 @@
 <div ng-cloak>
-	<div class="container">
-		<div class="nav">
-			<a style="float: right;" href="#/">
-				<img class="nav-button" src="img/treehouse.png" alt="treehouse logo">
-			</a>
-		</div><div class="nav">	
-			<a style="float: left;" href="#/codeschool">
-				<img class="nav-button" src="img/codeschool.png" alt="code school logo">
-			</a>
-		</div>	
-	</div>
+
+	<nav-buttons></nav-buttons>
+
 	<div class="error" ng-if="statusT">
 		<h3>{{statusT}} Error</h3>
 		<p>{{messageT}}</p>
@@ -24,11 +16,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="profile-info-right">	
-			<div class="search">
-				<input class="search-bar" type="text" placeholder="Search Badges..." ng-model="filterBadges"/></input>
-			</div>
-		</div>
+		
+		<search-bar></search-bar>
+
 	</div>
 	<div class="all-badges-container" ng-if="profileT">
 		<div class="badge-images animate" ng-repeat="badge in profileT.badges | filter:filterBadges:myInfo.badges.name">
