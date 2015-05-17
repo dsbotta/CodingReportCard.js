@@ -1,12 +1,17 @@
 (function() {
 
 	angular.module('CodingReportCard')
-		.controller('TreehouseAjax', ['$scope', '$http', function($scope, $http) {
+		.controller('Ajax', ['$scope', '$http', function($scope, $http) {
 			var treehouse = this;
+			$scope.numT = 0;
+			$scope.numC = 0;
 
 			$http.get('http://teamtreehouse.com/danielbotta.json', {cache: true})
 				.success(function(data) {
 					$scope.profileT = data;
+					for(var i in data.badges) {
+						$scope.numT++;
+					}
 				})
 
 				.error(function(data, status) {
@@ -17,9 +22,12 @@
 			$http.jsonp('https://www.codeschool.com/users/dsbotta.json?callback=JSON_CALLBACK', {cache: true})
 				.success(function(data) {
 					$scope.profileC = data;
+					for(var i in data.badges) {
+						$scope.numC++;
+					}
 					setTimeout(function() {
 						$('.loader').fadeOut();
-					}, 1000);
+					}, 1500);
 				})
 
 				.error(function(data, status) {

@@ -5,8 +5,6 @@
 
 			$routeProvider.when('/', {
 				templateUrl: 'routes/treehouse/treehouse-profile/'
-				// controller: 'TreehouseAjax',
-				// controllerAs: 'myInfo'
 			})
 
 			.when ('/treehouse-badge/:badgeId', {
