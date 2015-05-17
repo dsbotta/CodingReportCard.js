@@ -8,28 +8,19 @@
 	</div>
 	<div>
 		<div class="profile-info-left" ng-if="profileT">
-			<div class="profile-info-left-container">
-				<img class="profile-image" ng-src="{{profileT.gravatar_url}}" alt="{{profileT.name}}"/>
-				<div class="reportcard-name">
-					<h2>{{profileT.name}}'s<br/>Treehouse Report Card</h2>
-					<h3>{{profileT.points.total}} total points earned!</h3>
-				</div>
-			</div>
+
+			<profile-info school="Treehouse" image="{{profileT.gravatar_url}}" name="{{profileT.name}}" points="{{profileT.points.total}}" num="{{numT}}"></profile.info>
+
 		</div>
-		
+
 		<search-bar></search-bar>
 
 	</div>
 	<div class="all-badges-container" ng-if="profileT">
 		<div class="badge-images animate" ng-repeat="badge in profileT.badges | filter:filterBadges:myInfo.badges.name">
-			<a ng-href="#/treehouse-badge/{{badge.id}}">
-				<div style="position: relative;">
-					<span class="badge-hover-description">
-						<p style="margin: 0;">{{badge.name}}</p>
-					</span>
-					<img class="badge-image" ng-src="{{badge.icon_url}}" alt="{{badge.name}} badge image"/>
-				</div>
-			</a>
+
+			<all-badges link="#/treehouse-badge/{{badge.id}}" name="{{badge.name}}" icon="{{badge.icon_url}}"></all-badges>
+
 		</div>
 	</div>	
 </div>

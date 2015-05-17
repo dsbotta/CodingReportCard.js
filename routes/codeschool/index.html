@@ -8,29 +8,20 @@
 	</div>
 	<div>
 		<div class="profile-info-left" ng-if="profileC">
-			<div class="profile-info-left-container">
-				<img class="profile-image" ng-src="{{profileC.user.avatar}}" alt="{{profileC.user.username}} profile image"/>
-				<div class="reportcard-name">
-					<h2>{{profileC.user.username}}'s<br/>CodeSchool Report Card</h2>
-					<h3>{{profileC.user.total_score}} total points earned!</h3>
-				</div>
-			</div>
+
+			<profile-info school="Code School" image="{{profileC.user.avatar}}" name="{{profileC.user.username}}" points="{{profileC.user.total_score}}" num="{{numC}}"></profile.info>
+
 		</div>
 		
 		<search-bar></search-bar>
-		
+
 	</div>
 	<h3 ng-if="profileC">Completed</h3>
 	<div class="all-badges-container" ng-if="profileC">	
 		<div class="badge-images animate" ng-repeat="badge in profileC.badges | filter:filterBadges:profileC.badges.name">
-			<a ng-href="{{badge.course_url}}">
-				<div style="position: relative;">
-					<span class="badge-hover-description">
-						<p style="margin: 0;">{{badge.name}}</p>
-					</span>
-					<img class="badge-image" ng-src="{{badge.badge}}" alt="{{badge.name}} badge image"/>
-				</div>
-			</a>
+
+			<all-badges link="{{badge.course_url}}" name="{{badge.name}}" icon="{{badge.badge}}"></all-badges>
+
 		</div>
 	</div>
 	<div ng-if="profileC.courses.in_progress">
