@@ -1,3 +1,6 @@
+var treehouseProfileName = 'danielbotta';
+var codeSchoolProfileName = 'dsbotta';
+
 (function() {
 
 	angular.module('CodingReportCard')
@@ -6,7 +9,7 @@
 			$scope.numT = 0;
 			$scope.numC = 0;
 
-			$http.get('http://teamtreehouse.com/danielbotta.json', {cache: true})
+			$http.get('http://teamtreehouse.com/' + treehouseProfileName + '.json', {cache: true})
 				.success(function(data) {
 					$scope.profileT = data;
 					for(var i in data.badges) {
@@ -19,7 +22,7 @@
 					$scope.statusT = status;
 				})
 
-			$http.jsonp('https://www.codeschool.com/users/dsbotta.json?callback=JSON_CALLBACK', {cache: true})
+			$http.jsonp('https://www.codeschool.com/users/' + codeSchoolProfileName + '.json?callback=JSON_CALLBACK', {cache: true})
 				.success(function(data) {
 					$scope.profileC = data;
 					for(var i in data.badges) {
