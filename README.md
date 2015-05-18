@@ -23,7 +23,7 @@
 		At the top of the page, set the variables equal to your profiles names.
 		<pre><code>
 		var treehouseProfileName = 'Treehouse Profile name goes here';
-		var codeSchoolProfileName = 'Code School Profile name goes here'
+		var codeSchoolProfileName = 'Code School Profile name goes here';
 		</code></pre>
 	</li>
 	<li>You're all set! If you would like to remove the header, you can delete div with the header class in the main index.html file.</li>
