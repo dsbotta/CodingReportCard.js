@@ -28,3 +28,5 @@
 	</li>
 	<li>You're all set! If you would like to remove the header, you can delete div with the header class in the main index.html file.</li>
 </ul>
+
+<p>View my report card at myCodingReportCard.danielbotta.com</p>
