@@ -37,6 +37,11 @@
 					link: '@',
 					name: '@',
 					icon: '@'
+				},
+				link: function() {
+					setTimeout(function() {
+						$('.loader').fadeOut();
+					}, 1000);
 				}
 			}
 		})

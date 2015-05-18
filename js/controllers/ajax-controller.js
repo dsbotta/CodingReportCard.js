@@ -28,9 +28,6 @@ var codeSchoolProfileName = 'dsbotta';
 					for(var i in data.badges) {
 						$scope.numC++;
 					}
-					setTimeout(function() {
-						$('.loader').fadeOut();
-					}, 1500);
 				})
 
 				.error(function(data, status) {
